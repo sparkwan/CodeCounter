@@ -18,7 +18,7 @@
 
 ## 🎬 Video Tutorial
 
-<video src="videos/tutorial.mp4" controls width="800"></video>
+<video src="blob/master/videos/tutorial.mp4" controls width="800"></video>
 
 > If the video does not play in your browser, you can [download it directly](videos/tutorial.mp4).
 
