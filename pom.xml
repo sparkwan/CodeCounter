@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.tools</groupId>
-  <artifactId>source</artifactId>
+  <artifactId>neocodetools</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -10,7 +10,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <mainClass>com.github.dev.tool.PluginHostApplication</mainClass>
-    <!-- JRE 打包配置：设置本地 JRE 路径。修改此值指向你的 OpenJDK 17 安装目录 -->
+    <!-- JRE packaging configuration: Set local JRE path. Modify this value to point to your OpenJDK 17 installation directory -->
     <jre.path>D:\dev\Java\openjdk-17.0.2</jre.path>
   </properties>
   <dependencies>
@@ -114,7 +114,7 @@
               <jar>${project.build.directory}/NeoCodeTools.jar</jar>
               <outfile>${project.build.directory}/NeoCodeTools.exe</outfile>
               <downloadUrl>https://www.oracle.com/java/technologies/downloads/</downloadUrl>
-              <!-- 打包本地 OpenJDK 17 JRE -->
+              <!-- Bundle local OpenJDK 17 JRE -->
               <jre>
                 <path>${jre.path}</path>
               </jre>

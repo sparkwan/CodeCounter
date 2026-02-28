@@ -1045,7 +1045,7 @@ public class CodeCounterPluginPanel extends PluginPanel {
                                 org.apache.fontbox.ttf.TrueTypeCollection ttc =
                                         new org.apache.fontbox.ttf.TrueTypeCollection(msyhTtc);
                                 // Try known font names in the collection
-                                String[] fontNames = {"MicrosoftYaHei", "Microsoft YaHei", "微软雅黑"};
+                                String[] fontNames = {"SourceHanSansSC", "Source Han Sans SC", "Noto Sans CJK SC"};
                                 for (String name : fontNames) {
                                     try {
                                         org.apache.fontbox.ttf.TrueTypeFont ttf = ttc.getFontByName(name);
@@ -1745,4 +1745,3 @@ public class CodeCounterPluginPanel extends PluginPanel {
         this.repaint();
     }
 }
-
