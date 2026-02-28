@@ -75,9 +75,9 @@ Language is auto-detected from the OS locale at startup.
 
 ### ⚡ Quick Start (Windows)
 
-**Download the latest release:** [CodeCounter.exe](https://raw.githubusercontent.com/jasonwan2024/CodeCounter/refs/heads/master/releases/download/latest/CodeCounter.exe)
+**Download the latest release:**  https://github.com/sparkwan/CodeCounter/releases/download/Exe/CodeCouter2026.2.28.zip
 
-Simply download and run `CodeCounter.exe` — no installation required! The executable includes OpenJDK 17, so you don't need Java pre-installed.
+Simply download and unzip it to a directory of your choice. Then, run `CodeCounter.exe` — no installation required! The executable includes OpenJDK 17, so you don't need Java pre-installed.
 
 ### Prerequisites (for building from source)
 - **Java 17** or later
