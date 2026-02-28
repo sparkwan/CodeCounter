@@ -1,4 +1,4 @@
-﻿﻿# NeoCodeTools
+﻿# CodeCounter
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://openjdk.org/)
@@ -6,13 +6,13 @@
 🌐 **README en otros idiomas:**
 [English](README.md) | [简体中文](README_zh_CN.md) | [繁體中文](README_zh_TW.md) | [日本語](README_ja.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Português](README_pt.md)
 
-**NeoCodeTools** es una herramienta de escritorio gratuita, modular y extensible para ingenieros de software y equipos. Construida sobre una arquitectura de plugins, proporciona un conjunto de utilidades de análisis y transformación de código fuente a través de una interfaz gráfica Swing intuitiva.
+**CodeCounter** es una poderosa herramienta de análisis y estadísticas de código fuente con arquitectura de plugins. Proporciona capacidades completas de conteo de código para ingenieros de software y equipos a través de una interfaz gráfica Swing intuitiva.
 
 ---
 
 ## 📸 Capturas de Pantalla
 
-![NeoCodeTools Captura de Pantalla](screenshorts/screenshorts_es.png)
+![CodeCounter Captura de Pantalla](screenshorts/screenshorts_es.png)
 
 ---
 
@@ -26,27 +26,28 @@
 
 ## ✨ Características
 
-### 🔌 Arquitectura de Plugins
-- Diseño completamente modular — añade nuevas herramientas sin modificar el núcleo
-- Cada plugin se ejecuta en su propia pestaña con interfaz independiente
-- Gestión del ciclo de vida de los plugins (inicialización / cierre)
+### 📊 Estadísticas de Código Fuente
+La funcionalidad principal ofrece análisis y estadísticas completas del código:
 
-### 📊 Plugin Contador de Código
-- Cuenta **líneas de código**, **líneas de comentarios**, **líneas en blanco** y marcadores **TODO**
-- Plantillas de tipos de archivo: Java, Java Web, Java Backend, Frontend, Python, Web y Personalizado
-- Conjuntos predefinidos de directorios excluidos:
-  - **VCS**: `.git`, `.svn`, `.hg`
+- **Cuenta múltiples tipos de líneas**: líneas de código, líneas de comentarios, líneas en blanco y marcadores TODO
+- **Plantillas de múltiples tipos de archivos**: Java, Java Web, Java Backend, Frontend, Python, Web y configuraciones personalizadas
+- **Exclusión inteligente de directorios**: Conjuntos predefinidos que incluyen:
+  - **Control de versiones**: `.git`, `.svn`, `.hg`
   - **IDE / Editor**: `.idea`, `.settings`, `.vscode`, `.project`, `.classpath`
-  - **Build / Proyecto**: `target`, `build`, `dist`, `node_modules`, `__pycache__`
-- Tabla de resultados con **paginación**
-- **Gráficos**: gráfico de barras (comparación de archivos) y gráfico circular (resumen)
-- **Exportación**: CSV, XLSX, PDF (con soporte de fuentes CJK), Word (DOCX)
+  - **Construcción / Proyecto**: `target`, `build`, `dist`, `node_modules`, `__pycache__`
+- **Visualización de resultados interactiva**:
+  - Tabla de resultados detallada con paginación, mostrando estadísticas archivo por archivo
+  - **Gráficos visuales**: gráfico de barras para comparación de archivos, gráfico circular para estadísticas de resumen
+  - **Opciones de exportación flexibles**: CSV, XLSX, PDF (con soporte de fuentes CJK), Word (DOCX)
 
-### 🔧 Plugin de Formateo de Código *(en desarrollo)*
-- Formateo masivo de archivos de código fuente
+### 🔌 Arquitectura de Plugins
+CodeCounter está construido sobre una arquitectura de plugins que permite una fácil extensión:
 
-### 📦 Plugin de Renombrado de Paquetes *(en desarrollo)*
-- Renombrado masivo de paquetes / espacios de nombres en un proyecto
+- **Diseño completamente modular** — agregar nuevas funciones sin modificar el sistema central
+- **Pestañas de plugins independientes** — cada plugin se ejecuta en su propia pestaña con interfaz dedicada
+- **Gestión del ciclo de vida de plugins** — manejo correcto de inicialización y cierre
+- **Plugins integrados**:
+  - **Contador de Código** — la funcionalidad principal de estadísticas
 
 ### 🌍 Internacionalización (i18n)
 Completamente localizado en **8 idiomas**:
@@ -108,10 +109,8 @@ source/
     │   │   │   ├── ThemeManager.java
     │   │   │   ├── LocalizationManager.java
     │   │   │   └── impl/                         # Implementaciones por defecto
-    │   │   └── plugins/                          # Plugins integrados
-    │   │       ├── counter/                      # Contador de código
-    │   │       ├── formatter/                    # Formateo de código
-    │   │       └── renamer/                      # Renombrado de paquetes
+│   │   └── plugins/                          # Plugins integrados
+│   │       └── counter/                      # Contador de código
     │   └── resources/
     │       ├── i18n/                             # Archivos de localización
     │       └── icons/                            # Iconos de la aplicación

@@ -1,4 +1,4 @@
-﻿﻿# NeoCodeTools
+﻿# CodeCounter
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://openjdk.org/)
@@ -6,13 +6,13 @@
 🌐 **README dans d'autres langues :**
 [English](README.md) | [简体中文](README_zh_CN.md) | [繁體中文](README_zh_TW.md) | [日本語](README_ja.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [Português](README_pt.md)
 
-**NeoCodeTools** est un outil de bureau gratuit, modulaire et extensible pour les ingénieurs logiciels et les équipes. Construit sur une architecture de plugins, il fournit une suite d'utilitaires d'analyse et de transformation de code source à travers une interface graphique Swing intuitive.
+**CodeCounter** est un puissant outil d'analyse et de statistiques de code source avec une architecture de plugins. Il fournit des capacités complètes de comptage de code pour les ingénieurs logiciels et les équipes via une interface graphique Swing intuitive.
 
 ---
 
 ## 📸 Captures d'écran
 
-![NeoCodeTools Capture d'écran](screenshorts/screenshorts_fr.png)
+![CodeCounter Capture d'écran](screenshorts/screenshorts_fr.png)
 
 ---
 
@@ -26,27 +26,28 @@
 
 ## ✨ Fonctionnalités
 
-### 🔌 Architecture de plugins
-- Conception entièrement modulaire — ajoutez de nouveaux outils sans modifier le cœur
-- Chaque plugin s'exécute dans son propre onglet avec une interface indépendante
-- Gestion du cycle de vie des plugins (initialisation / arrêt)
+### 📊 Statistiques du Code Source
+La fonctionnalité principale offre une analyse et des statistiques complètes du code :
 
-### 📊 Plugin Compteur de Code
-- Compte les **lignes de code**, les **lignes de commentaires**, les **lignes vides** et les marqueurs **TODO**
-- Modèles de types de fichiers : Java, Java Web, Java Backend, Frontend, Python, Web et Personnalisé
-- Ensembles prédéfinis de répertoires exclus :
-  - **VCS** : `.git`, `.svn`, `.hg`
+- **Compte plusieurs types de lignes** : lignes de code, lignes de commentaires, lignes vides et marqueurs TODO
+- **Modèles de types de fichiers multiples** : Java, Java Web, Java Backend, Frontend, Python, Web et configurations personnalisées
+- **Exclusion intelligente de répertoires** : Ensembles prédéfinis incluant :
+  - **Contrôle de version** : `.git`, `.svn`, `.hg`
   - **IDE / Éditeur** : `.idea`, `.settings`, `.vscode`, `.project`, `.classpath`
   - **Build / Projet** : `target`, `build`, `dist`, `node_modules`, `__pycache__`
-- Tableau de résultats avec **pagination**
-- **Graphiques** : diagramme en barres (comparaison de fichiers) et diagramme circulaire (résumé)
-- **Export** : CSV, XLSX, PDF (avec support des polices CJK), Word (DOCX)
+- **Affichage des résultats interactif** :
+  - Tableau de résultats détaillé avec pagination, affichant les statistiques fichier par fichier
+  - **Graphiques visuels** : graphique en barres pour la comparaison de fichiers, graphique circulaire pour les statistiques de résumé
+  - **Options d'export flexibles** : CSV, XLSX, PDF (avec support des polices CJK), Word (DOCX)
 
-### 🔧 Plugin Formateur de Code *(en développement)*
-- Formatage en lot de fichiers de code source
+### 🔌 Architecture de Plugins
+CodeCounter est construit sur une architecture de plugins qui permet une extension facile :
 
-### 📦 Plugin Renommage de Packages *(en développement)*
-- Renommage en lot de packages / espaces de noms dans un projet
+- **Conception entièrement modulaire** — ajouter de nouvelles fonctionnalités sans modifier le système central
+- **Onglets de plugins indépendants** — chaque plugin s'exécute dans son propre onglet avec une interface dédiée
+- **Gestion du cycle de vie des plugins** — gestion correcte de l'initialisation et de l'arrêt
+- **Plugins intégrés** :
+  - **Compteur de Code** — la fonctionnalité principale de statistiques
 
 ### 🌍 Internationalisation (i18n)
 Entièrement localisé en **8 langues** :
@@ -108,10 +109,8 @@ source/
     │   │   │   ├── ThemeManager.java
     │   │   │   ├── LocalizationManager.java
     │   │   │   └── impl/                         # Implémentations par défaut
-    │   │   └── plugins/                          # Plugins intégrés
-    │   │       ├── counter/                      # Compteur de code
-    │   │       ├── formatter/                    # Formateur de code
-    │   │       └── renamer/                      # Renommage de packages
+│   │   └── plugins/                          # Plugins intégrés
+│   │       └── counter/                      # Compteur de code
     │   └── resources/
     │       ├── i18n/                             # Fichiers de localisation
     │       └── icons/                            # Icônes de l'application

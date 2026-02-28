@@ -1,4 +1,4 @@
-﻿﻿# NeoCodeTools
+﻿# CodeCounter
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://openjdk.org/)
@@ -6,13 +6,13 @@
 🌐 **其他語言版本：**
 [English](README.md) | [简体中文](README_zh_CN.md) | [日本語](README_ja.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Português](README_pt.md)
 
-**NeoCodeTools** 是一款免費、模組化、可擴展的桌面工具，專為軟體工程師和團隊打造。基於外掛式架構，透過直覺的 Swing 介面提供一系列原始碼分析和轉換工具。
+**CodeCounter** 是一款功能強大的原始碼分析和統計工具，採用外掛式架構。它為軟體工程師和團隊提供了全面的程式碼統計功能，透過直覺的 Swing 介面進行操作。
 
 ---
 
 ## 📸 截圖
 
-![NeoCodeTools 截圖](screenshorts/screenshorts_zh_tw.png)
+![CodeCounter 截圖](screenshorts/screenshorts_zh_tw.png)
 
 ---
 
@@ -26,27 +26,28 @@
 
 ## ✨ 功能特色
 
-### 🔌 外掛架構
-- 完全外掛化設計 — 無需修改核心程式碼即可新增工具
-- 每個外掛在獨立頁籤中執行，擁有獨立 UI
-- 外掛生命週期管理（初始化 / 關閉）
+### 📊 原始碼統計
+核心功能提供全面的程式碼分析和統計：
 
-### 📊 程式碼統計外掛
-- 統計**程式碼行**、**註解行**、**空行**和 **TODO** 標記
-- 多種檔案類型範本：Java、Java Web、Java 後端、前端、Python、Web 和自訂
-- 預定義排除目錄集：
+- **統計多種行類型**：程式碼行、註解行、空行和 TODO 標記
+- **多種檔案類型範本**：Java、Java Web、Java 後端、前端、Python、Web 和自訂配置
+- **智慧目錄排除**：預定義的排除集包括：
   - **版本控制**：`.git`、`.svn`、`.hg`
   - **IDE / 編輯器**：`.idea`、`.settings`、`.vscode`、`.project`、`.classpath`
   - **建置 / 工程**：`target`、`build`、`dist`、`node_modules`、`__pycache__`
-- 結果表格支援**分頁**
-- **圖表**：長條圖（檔案對比）和圓餅圖（彙總）
-- **匯出**：CSV、XLSX、PDF（支援中日韓字型）、Word（DOCX）
+- **互動式結果展示**：
+  - 支援分頁的詳細結果表格，逐檔案顯示統計資訊
+  - **視覺化圖表**：長條圖用於檔案對比，圓餅圖顯示彙總統計
+  - **靈活的匯出選項**：CSV、XLSX、PDF（支援中日韓字型）、Word（DOCX）
 
-### 🔧 程式碼格式化外掛 *（開發中）*
-- 批次格式化原始碼檔案
+### 🔌 外掛架構
+CodeCounter 採用外掛式架構，支援輕鬆擴展：
 
-### 📦 套件名稱重新命名外掛 *（開發中）*
-- 批次重新命名專案中的套件名稱 / 命名空間
+- **完全模組化設計** — 新增功能無需修改核心系統
+- **獨立的外掛頁籤** — 每個外掛在獨立頁籤中執行，擁有專用 UI
+- **外掛生命週期管理** — 正確的初始化和關閉處理
+- **內建外掛**：
+  - **程式碼統計** — 主要的統計功能
 
 ### 🌍 國際化（i18n）
 完整支援 **8 種語言**：
@@ -108,10 +109,8 @@ source/
     │   │   │   ├── ThemeManager.java
     │   │   │   ├── LocalizationManager.java
     │   │   │   └── impl/                         # 預設實作
-    │   │   └── plugins/                          # 內建外掛
-    │   │       ├── counter/                      # 程式碼統計
-    │   │       ├── formatter/                    # 程式碼格式化
-    │   │       └── renamer/                      # 套件名稱重新命名
+│   │   └── plugins/                          # 內建外掛
+│   │       └── counter/                      # 程式碼統計
     │   └── resources/
     │       ├── i18n/                             # 國際化資源檔
     │       └── icons/                            # 應用程式圖示

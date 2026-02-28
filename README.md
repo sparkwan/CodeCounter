@@ -1,4 +1,4 @@
-﻿﻿﻿# NeoCodeTools
+﻿# CodeCounter
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://openjdk.org/)
@@ -6,19 +6,19 @@
 🌐 **README in other languages:**
 [简体中文](README_zh_CN.md) | [繁體中文](README_zh_TW.md) | [日本語](README_ja.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [Français](README_fr.md) | [Português](README_pt.md)
 
-**NeoCodeTools** is a free, modular, and extensible desktop toolkit for software engineers and teams. Built on a pluggable architecture, it delivers a suite of source-code analysis and transformation utilities through an intuitive Swing-based GUI.
+**CodeCounter** is a powerful source code analysis and statistics tool with a pluggable architecture. It provides comprehensive code counting capabilities for software engineers and teams through an intuitive Swing-based GUI.
 
 ---
 
 ## 📸 Screenshots
 
-![NeoCodeTools Screenshot](screenshorts/screenshorts.png)
+![CodeCounter Screenshot](screenshorts/screenshorts.png)
 
 ---
 
 ## 🎬 Video Tutorial
 
-<video src="https://raw.githubusercontent.com/sparkwan/NeoCodeTools/refs/heads/master/videos/tutorial.mp4" controls width="800"></video>
+<video src="https://raw.githubusercontent.com/sparkwan/CodeCounter/refs/heads/master/videos/tutorial.mp4" controls width="800"></video>
 
 > If the video does not play in your browser, you can [download it directly](videos/tutorial.mp4).
 
@@ -26,27 +26,28 @@
 
 ## ✨ Features
 
-### 🔌 Plugin Architecture
-- Fully pluggable design — add new tools without touching the core
-- Each plugin runs in its own tab with an independent UI
-- Plugin lifecycle management (initialize / shutdown)
+### 📊 Source Code Statistics
+The core functionality provides comprehensive code analysis and statistics:
 
-### 📊 Code Counter Plugin
-- Count **code lines**, **comment lines**, **blank lines**, and **TODO** markers
-- File-type templates: Java, Java Web, Java Backend, Frontend, Python, Web, and Custom
-- Predefined exclude-directory sets:
-  - **VCS**: `.git`, `.svn`, `.hg`
+- **Count various line types**: code lines, comment lines, blank lines, and TODO markers
+- **Multiple file-type templates**: Java, Java Web, Java Backend, Frontend, Python, Web, and Custom configurations
+- **Smart directory exclusion**: Predefined sets for:
+  - **Version Control**: `.git`, `.svn`, `.hg`
   - **IDE / Editor**: `.idea`, `.settings`, `.vscode`, `.project`, `.classpath`
   - **Build / Project**: `target`, `build`, `dist`, `node_modules`, `__pycache__`
-- Result table with **pagination**
-- **Charts**: bar chart (file comparison) and pie chart (summary)
-- **Export**: CSV, XLSX, PDF (CJK font support), Word (DOCX)
+- **Interactive results**:
+  - Paginated table with detailed file-by-file breakdown
+  - **Visual charts**: bar chart for file comparison, pie chart for summary statistics
+  - **Flexible export options**: CSV, XLSX, PDF (with CJK font support), and Word (DOCX)
 
-### 🔧 Code Formatter Plugin *(in development)*
-- Batch-format source code files
+### 🔌 Plugin Architecture
+CodeCounter is built on a pluggable architecture that allows easy extension:
 
-### 📦 Package Renamer Plugin *(in development)*
-- Batch-rename packages / namespaces across a project
+- **Fully modular design** — add new features without modifying the core system
+- **Independent plugin tabs** — each plugin runs in its own tab with dedicated UI
+- **Plugin lifecycle management** — proper initialization and shutdown handling
+- **Built-in plugins**:
+  - **Code Counter** — the main statistics feature
 
 ### 🌍 Internationalization (i18n)
 Fully localized in **8 languages**:
@@ -74,9 +75,9 @@ Language is auto-detected from the OS locale at startup.
 
 ### ⚡ Quick Start (Windows)
 
-**Download the latest release:** [NeoCodeTools.exe](https://raw.githubusercontent.com/jasonwan2024/NeoCodeTools/refs/heads/master/releases/download/latest/NeoCodeTools.exe)
+**Download the latest release:** [CodeCounter.exe](https://raw.githubusercontent.com/jasonwan2024/CodeCounter/refs/heads/master/releases/download/latest/CodeCounter.exe)
 
-Simply download and run `NeoCodeTools.exe` — no installation required! The executable includes OpenJDK 17, so you don't need Java pre-installed.
+Simply download and run `CodeCounter.exe` — no installation required! The executable includes OpenJDK 17, so you don't need Java pre-installed.
 
 ### Prerequisites (for building from source)
 - **Java 17** or later
@@ -90,10 +91,10 @@ mvn clean package
 ### Run Locally
 ```bash
 # Option 1: Run the EXE (Windows only, with bundled JRE)
-target/NeoCodeTools.exe
+target/CodeCounter.exe
 
 # Option 2: Run the JAR (cross-platform, requires Java 17+)
-java -jar target/NeoCodeTools.jar
+java -jar target/CodeCounter.jar
 ```
 
 ---
@@ -118,10 +119,8 @@ source/
     │   │   │   ├── ThemeManager.java
     │   │   │   ├── LocalizationManager.java
     │   │   │   └── impl/                         # Default implementations
-    │   │   └── plugins/                          # Built-in plugins
-    │   │       ├── counter/                      # Code Counter
-    │   │       ├── formatter/                    # Code Formatter
-    │   │       └── renamer/                      # Package Renamer
+│   │   └── plugins/                          # Built-in plugins
+│   │       └── counter/                      # Code Counter
     │   └── resources/
     │       ├── i18n/                             # Localization bundles
     │       └── icons/                            # App icons

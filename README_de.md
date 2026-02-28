@@ -1,4 +1,4 @@
-﻿﻿# NeoCodeTools
+﻿# CodeCounter
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange.svg)](https://openjdk.org/)
@@ -6,13 +6,13 @@
 🌐 **README in anderen Sprachen:**
 [English](README.md) | [简体中文](README_zh_CN.md) | [繁體中文](README_zh_TW.md) | [日本語](README_ja.md) | [Español](README_es.md) | [Français](README_fr.md) | [Português](README_pt.md)
 
-**NeoCodeTools** ist ein kostenloses, modulares und erweiterbares Desktop-Tool für Softwareentwickler und Teams. Basierend auf einer Plugin-fähigen Architektur bietet es eine Reihe von Quellcode-Analyse- und Transformationswerkzeugen über eine intuitive Swing-basierte GUI.
+**CodeCounter** ist ein leistungsstarkes Werkzeug zur Quellcode-Analyse und -Statistikerstellung mit Plugin-Architektur. Es bietet umfassende Code-Zählfunktionen für Softwareentwickler und Teams über eine intuitive Swing-basierte GUI.
 
 ---
 
 ## 📸 Screenshots
 
-![NeoCodeTools Screenshot](screenshorts/screenshorts_de.png)
+![CodeCounter Screenshot](screenshorts/screenshorts_de.png)
 
 ---
 
@@ -26,27 +26,28 @@
 
 ## ✨ Funktionen
 
-### 🔌 Plugin-Architektur
-- Vollständig modulares Design — neue Tools hinzufügen, ohne den Kern zu ändern
-- Jedes Plugin läuft in einem eigenen Tab mit unabhängiger Benutzeroberfläche
-- Plugin-Lebenszyklus-Management (Initialisierung / Herunterfahren)
+### 📊 Quellcode-Statistiken
+Die Kernfunktionalität bietet umfassende Code-Analyse und -Statistiken:
 
-### 📊 Code-Zähler-Plugin
-- Zählt **Codezeilen**, **Kommentarzeilen**, **Leerzeilen** und **TODO**-Markierungen
-- Dateityp-Vorlagen: Java, Java Web, Java Backend, Frontend, Python, Web und Benutzerdefiniert
-- Vordefinierte Ausschluss-Verzeichnissätze:
-  - **VCS**: `.git`, `.svn`, `.hg`
+- **Zählt verschiedene Zeilentypen**: Codezeilen, Kommentarzeilen, Leerzeilen und TODO-Markierungen
+- **Mehrere Dateityp-Vorlagen**: Java, Java Web, Java Backend, Frontend, Python, Web und benutzerdefinierte Konfigurationen
+- **Intelligente Verzeichnisausschluss**: Vordefinierte Ausschlussmengen:
+  - **Versionskontrolle**: `.git`, `.svn`, `.hg`
   - **IDE / Editor**: `.idea`, `.settings`, `.vscode`, `.project`, `.classpath`
   - **Build / Projekt**: `target`, `build`, `dist`, `node_modules`, `__pycache__`
-- Ergebnistabelle mit **Paginierung**
-- **Diagramme**: Balkendiagramm (Dateivergleich) und Kreisdiagramm (Zusammenfassung)
-- **Export**: CSV, XLSX, PDF (mit CJK-Schriftunterstützung), Word (DOCX)
+- **Interaktive Ergebnisanzeige**:
+  - Detaillierte Ergebnistabelle mit Paginierung, zeigt Statistiken Datei für Datei
+  - **Visuelle Diagramme**: Balkendiagramm für Dateivergleich, Kreisdiagramm für Zusammenfassungsstatistiken
+  - **Flexible Exportoptionen**: CSV, XLSX, PDF (mit CJK-Schriftunterstützung), Word (DOCX)
 
-### 🔧 Code-Formatierer-Plugin *(in Entwicklung)*
-- Batch-Formatierung von Quellcodedateien
+### 🔌 Plugin-Architektur
+CodeCounter basiert auf einer Plugin-Architektur, die eine einfache Erweiterung ermöglicht:
 
-### 📦 Paket-Umbenennung-Plugin *(in Entwicklung)*
-- Batch-Umbenennung von Paketen / Namensräumen in einem Projekt
+- **Vollständig modulares Design** — neue Funktionen hinzufügen ohne Änderung des Kernsystems
+- **Unabhängige Plugin-Tabs** — jedes Plugin läuft in einem eigenen Tab mit dedizierter Benutzeroberfläche
+- **Plugin-Lebenszyklus-Management** — ordnungsgemäße Initialisierung und Herunterfahren
+- **Integrierte Plugins**:
+  - **Code-Zähler** — die Hauptstatistikfunktion
 
 ### 🌍 Internationalisierung (i18n)
 Vollständig lokalisiert in **8 Sprachen**:
@@ -108,10 +109,8 @@ source/
     │   │   │   ├── ThemeManager.java
     │   │   │   ├── LocalizationManager.java
     │   │   │   └── impl/                         # Standardimplementierungen
-    │   │   └── plugins/                          # Integrierte Plugins
-    │   │       ├── counter/                      # Code-Zähler
-    │   │       ├── formatter/                    # Code-Formatierer
-    │   │       └── renamer/                      # Paket-Umbenennung
+│   │   └── plugins/                          # Integrierte Plugins
+│   │       └── counter/                      # Code-Zähler
     │   └── resources/
     │       ├── i18n/                             # Lokalisierungsdateien
     │       └── icons/                            # Anwendungssymbole
